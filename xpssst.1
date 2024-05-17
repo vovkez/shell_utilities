@@ -1,0 +1,29 @@
+.TH XPSST 1 "Date of Release" Linux "xpssst Manual"
+.SH NAME
+xpssst \- computes SHA256 hashes of files in a specified directory
+.SH SYNOPSIS
+.B xpssst
+[\fIdirectory\fR] [\fIoutput_file\fR]
+.SH DESCRIPTION
+.B xpssst
+is a script that computes the SHA256 hashes of every file within a specified directory.
+The hashes are output to a file specified by the user. The script handles only files directly
+within the given directory and ignores subdirectories.
+.SH OPTIONS
+There are no options for this script. It requires two positional arguments:
+.TP
+\fIdirectory\fR
+The directory whose files are to be hashed.
+.TP
+\fIoutput_file\fR
+The file where only the hashes will be stored.
+.SH EXAMPLES
+To compute hashes of all files in /usr/bin and output the hashes to hashes.txt:
+.PP
+.nf
+\fBxpssst /usr/bin hashes.txt\fR
+.fi
+.SH AUTHOR
+Written by [Your Name].
+.SH "SEE ALSO"
+\fBsha256sum(1)\fR.
